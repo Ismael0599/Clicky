@@ -2,27 +2,49 @@
 @use "../abstracts/mixins" as *;
 
 .layout-container {
-  @include flex(flex, row, center, center);
+  @include flex(flex, row, center, flex-start);
   min-height: 100vh;
-  
+  margin-top: 5rem;
 
   .itemList {
-    @include grid(3, 2rem);  
+    @include grid(3, 2rem);
 
     .item-card {
       @include flex(flex, column, center, center);
       border: 1px solid rgb(173, 173, 173);
       border-radius: 1rem;
+      width: 25rem;
 
-      img {
-        height: $img-height-card;
-        width: $img-width-card;
-        margin-bottom: 1rem;
+      .item-card-img-container {
+        position: relative;
         border-radius: 1rem 1rem 0 0;
+        height: 20rem;
+        margin-bottom: 1rem;
+        img {
+          height: 20rem;
+          width: 25rem;
+          border-radius: 1rem 1rem 0 0;
+        }
+
+        p {
+          position: absolute;
+          @include flex(flex, row, center, center);
+          border-radius: 0 1rem 0 1rem;
+          width: 10rem;
+          height: 2rem;
+          font-size: 1rem;
+          background-color: #08362f;
+          color: #fff;
+          font-weight: 500;
+          font-size: 1.2rem;
+          top: 0rem;
+          right: 0rem;
+        }
       }
 
       h2 {
         font-size: 2rem;
+        margin-bottom: 1rem;
       }
 
       p {
@@ -30,20 +52,146 @@
         font-weight: 500;
       }
 
-      .btn-details {
-        font-size: 1.5rem;
-        border: 1px solid rgb(150, 150, 150);
-        border-radius: 0.8rem;
-        width: 20rem;
-        height: 3rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        transition: all 300ms ease;
-        cursor: pointer;
+      a {
+        .btn-details {
+          font-size: 1.5rem;
+          border: 1px solid rgb(150, 150, 150);
+          border-radius: 0.8rem;
+          width: 20rem;
+          height: 3rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          transition: all 300ms ease;
+          cursor: pointer;
 
-        &:hover {
-          color: #fff;
-          background-color: #224d3c;
+          &:hover {
+            color: #fff;
+            background-color: #224d3c;
+          }
+        }
+      }
+    }
+  }
+
+  .itemDetail {
+    @include flex(flex, row, center, flex-start);
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+
+    img {
+      border-radius: 5rem;
+      height: 45rem;
+      width: 55rem;
+    }
+
+    .detail-container {
+      @include flex(flex, column, center, flex-start);
+      margin-top: 2rem;
+
+      .section-title {
+        margin-bottom: 2rem;
+        h2 {
+          font-size: 4rem;
+        }
+
+        p {
+          margin-top: 1rem;
+          font-size: 2.5rem;
+        }
+      }
+
+      .section-details {
+        h3 {
+          font-size: 2.6rem;
+        }
+
+        dl {
+          margin-bottom: 2rem;
+
+          dt {
+            font-size: 1.8rem;
+            font-weight: 500;
+          }
+
+          dd {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .section-quantity {
+        margin-bottom: 2rem;
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+
+        .input-container {
+          @include flex(flex, row, center, center);
+
+          .btn-decrement {
+            @include flex(flex, row, center, center);
+            font-size: 2rem;
+            background-color: #bcbdbd;
+            color: black;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            width: 5rem;
+            height: 2rem;
+            margin-right: 1rem;
+            transition: all 300ms ease;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #08362f;
+              color: #fff;
+            }
+          }
+
+          input {
+            width: 5rem;
+            font-size: 1.5rem;
+          }
+
+          .btn-increment {
+            @include flex(flex, row, center, center);
+            font-size: 2rem;
+            background-color: #bcbdbd;
+            color: black;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            width: 5rem;
+            height: 2rem;
+            margin-left: 1rem;
+            transition: all 300ms ease;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #08362f;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .btn-addCart {
+        button {
+          @include flex(flex, row, center, center);
+          font-size: 1.5rem;
+          background-color: #bcbdbd;
+          color: black;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          width: 20rem;
+          height: 5rem;
+          transition: all 300ms ease;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #08362f;
+            color: #fff;
+          }
         }
       }
     }

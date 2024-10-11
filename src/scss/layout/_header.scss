@@ -9,14 +9,15 @@
   .logoClicky-box {
     @include flex(flex, row, center, center);
     width: 20rem;
+    a {
+      img {
+        height: 8rem;
+        cursor: pointer;
+        transition: $transition;
 
-    img {
-      height: 8rem;
-      cursor: pointer;
-      transition: $transition;
-
-      &:hover {
-        transform: scale(1.3);
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -44,7 +45,7 @@
             transform: translateX(-50%) scaleY(0);
             transition: $transition;
           }
-        
+
           &:hover::after,
           &.isActive::after {
             transform: translateX(-50%) scaleY(1);
@@ -66,7 +67,7 @@
       transition: $transition;
 
       &:hover {
-        transform: scale(1.3);
+        transform: scale(1.2);
       }
 
       img {
@@ -89,5 +90,3 @@
     }
   }
 }
-
-

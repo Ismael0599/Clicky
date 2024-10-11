@@ -1,10 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logoClicky from "../../assets/logoClicky.png";
 
 const Logo = () => {
     return (
         <div className="logoClicky-box">
-            <img src={logoClicky} alt="Logo de la página" />
+            <NavLink to="/Clicky" end>
+                <img src={logoClicky} alt="Logo de la página" />
+            </NavLink>
+
         </div>
     );
 };
