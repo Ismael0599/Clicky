@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "KeyChron K6",
+        "image": "/Clicky/img/teclado.jpg",
+        "category": "100",
+        "price": 45038,
+        "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
+    },
+    {
+        "id": 2,
+        "title": "Ducky One 2 Mini",
+        "image": "/Clicky/img/teclado2.jpg",
+        "category": "60",
+        "price": 33145,
+        "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum."
+    },
+    {
+        "id": 3,
+        "title": "Glorious GMMK Pro",
+        "image": "/Clicky/img/teclado3.jpg",
+        "category": "70",
+        "price": 78264,
+        "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+    },
+    {
+        "id": 4,
+        "title": "Leopold FC660M",
+        "image": "/Clicky/img/teclado4.jpg",
+        "category": "60",
+        "price": 61726,
+        "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
+    },
+    {
+        "id": 5,
+        "title": "Anne Pro 2",
+        "image": "/Clicky/img/teclado5.jpg",
+        "category": "100",
+        "price": 17612,
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus."
+    },
+    {
+        "id": 6,
+        "title": "Varmilo VA87M",
+        "image": "/Clicky/img/teclado6.jpg",
+        "category": "70",
+        "price": 14616,
+        "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum."
+    }
+]

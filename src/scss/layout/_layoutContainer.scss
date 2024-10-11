@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.layout-container {
+  @include flex(flex, row, center, center);
+  min-height: 100vh;
+  
+
+  .itemList {
+    @include grid(3, 2rem);  
+
+    .item-card {
+      @include flex(flex, column, center, center);
+      border: 1px solid rgb(173, 173, 173);
+      border-radius: 1rem;
+
+      img {
+        height: $img-height-card;
+        width: $img-width-card;
+        margin-bottom: 1rem;
+        border-radius: 1rem 1rem 0 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .btn-details {
+        font-size: 1.5rem;
+        border: 1px solid rgb(150, 150, 150);
+        border-radius: 0.8rem;
+        width: 20rem;
+        height: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        transition: all 300ms ease;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+          background-color: #224d3c;
+        }
+      }
+    }
+  }
+}

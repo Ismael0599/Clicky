@@ -1,11 +1,22 @@
-import Header from "./components/header/Header";
 import ItemListContainer from "./components/others/ItemListContainer";
+import Layout from "./components/others/Layout";
+import NotFound from "./components/others/NotFound";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const App = () => { 
+
+const App = () => {
   return (
     <>
-      <Header></Header>
-      <ItemListContainer greeting="¡Bienvenido a Clicky!"></ItemListContainer>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/Clicky" element={<ItemListContainer />} />
+            <Route path="Clicky/category/:categoryId" element={<ItemListContainer />} />
+            {/* <Route path="/" element={<ItemListContainer />} /> */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
     </>
   );
 }
